@@ -86,20 +86,20 @@ func (todos *Todos) edit(index int, title string) error {
 func (todos *Todos) print() {
 	table := table.New(os.Stdout)
 	table.SetRowLines(false)
-	table.SetHeaders("#", "Title", "Completed", "Created At", "Completed At")
+	table.SetHeaders("#", "Title", "Status", "Created At", "Completed At")
 
 	for index, t := range *todos {
-		completed := " "
+		completed := "✗"
 		completedAt := ""
 
 		if t.Completed {
-			completed = "☑️"
+			completed = "✓"
 			if t.CompletedAt != nil {
-				completedAt = t.CompletedAt.Format(time.RFC1123)
+				completedAt = t.CompletedAt.Format("01/02/2006 15:04")
 			}
 		}
 
-		table.AddRow(strconv.Itoa(index), t.Title, completed, t.CreatedAt.Format(time.RFC1123), completedAt)
+		table.AddRow(strconv.Itoa(index), t.Title, completed, t.CreatedAt.Format("01/02/2006 15:04"), completedAt)
 	}
 
 	table.Render()
