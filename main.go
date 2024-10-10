@@ -1,9 +1,18 @@
 package main
 
+import (
+	"os"
+	"path/filepath"
+)
+
 func main() {
+	homeDir, _ := os.UserHomeDir()
+	dataFilePath := filepath.Join(homeDir, ".gotodo", "todos.json")
+	os.MkdirAll(filepath.Dir(dataFilePath), os.ModePerm)
+
 	todos := Todos{}
 
-	storage := NewStorage[Todos]("todos.json")
+	storage := NewStorage[Todos](dataFilePath)
 	storage.Load(&todos)
 
 	cmdFlags := NewCmdFlags()
