@@ -15,20 +15,20 @@ GoTodo is a simple CLI todo list application written in Go. It allows users to a
 
 ## 🛠️ Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
 
 ```bash
 git clone https://github.com/ashish0kumar/GoTodo.git
 cd GoTodo
 ```
 
-2. Build the project:
+2. **Build the project**:
 
 ```bash
 go build
 ```
 
-3. Run the CLI app:
+3. **Run the CLI app**:
 
 ```bash
 ./GoTodo
@@ -36,15 +36,21 @@ go build
 
 **Configure Global CLI Access (Optional)**
 
-Move the executable to a directory in your system’s PATH (e.g., `/usr/local/bin`) so it can be accessed from anywhere in the terminal:
+- Move the executable to a directory in your system’s PATH (e.g., `/usr/local/bin`) so it can be accessed from anywhere in the terminal:
 
 ```bash
 sudo mv GoTodo /usr/local/bin/
 ```
 
-By default, GoTodo stores tasks in a todos.json file located in your home directory under a .gotodo folder `~/.gotodo/todos.json`. This ensures that the file is not generated in every directory you run the command from.
-
+- By default, GoTodo stores tasks in a todos.json here `~/.gotodo/todos.json`. This ensures that the file is not generated in every directory you run the command from.
 If the folder doesn't already exist, GoTodo will automatically create it the first time you run the app.
+
+- Once the executable is set up, you can run GoTodo from any directory:
+
+```bash
+GoTodo -add "Buy groceries"
+GoTodo -list
+```
 
 ## 🔧 Usage
 
