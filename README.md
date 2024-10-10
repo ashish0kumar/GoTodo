@@ -34,6 +34,18 @@ go build
 ./GoTodo
 ```
 
+**Configure Global CLI Access (Optional)**
+
+Move the executable to a directory in your system’s PATH (e.g., `/usr/local/bin`) so it can be accessed from anywhere in the terminal:
+
+```bash
+sudo mv GoTodo /usr/local/bin/
+```
+
+By default, GoTodo stores tasks in a todos.json file located in your home directory under a .gotodo folder `~/.gotodo/todos.json`. This ensures that the file is not generated in every directory you run the command from.
+
+If the folder doesn't already exist, GoTodo will automatically create it the first time you run the app.
+
 ## 🔧 Usage
 
 GoTodo supports several command-line flags for managing your todo list:
