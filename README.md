@@ -36,7 +36,7 @@ go build
 
 **Configure Global CLI Access (Optional)**
 
-- Move the executable to a directory in your system’s PATH (e.g., `/usr/local/bin`) so it can be accessed from anywhere in the terminal:
+- Move the executable to a directory in your system’s PATH (e.g., `/usr/local/bin`):
 
 ```bash
 sudo mv GoTodo /usr/local/bin/
