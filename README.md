@@ -2,6 +2,8 @@
 
 GoTodo is a simple CLI todo list application written in Go. It allows users to add, edit, delete, toggle, and list tasks directly from the terminal, with todos saved in a JSON file for persistence.
 
+![ss](assets/ss.png)
+
 ## ✨ Features
 
 - Add a new todo
