@@ -94,7 +94,7 @@ All todos are stored in a `todos.json` file in the project directory for persist
 
 **Example Output**
 
-```bash
+```
 ┌───┬─────────────────────────────┬────────┬──────────────────┬──────────────────┐
 │ # │            Title            │ Status │    Created At    │   Completed At   │
 ├───┼─────────────────────────────┼────────┼──────────────────┼──────────────────┤
